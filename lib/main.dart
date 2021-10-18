@@ -1,5 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audio_cache.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,8 @@ Expanded expandedFlatPlayButton(Color backGroundColor, int noteNum) {
       color: backGroundColor,
       onPressed: () {
         player.play('note$noteNum.wav');
-      }, child: null,
+      },
+      child: null,
     ),
   );
 }
@@ -44,25 +45,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// Stub FlatPlayButton Class
-// class FlatPlayButton {
-//   Color backGroundColor;
-//   String note;
-//   String text;
-//   FlatPlayButton(Colors color, String note, String text)
-//   {
-//     this.backGroundColor = color as Color;
-//     this.note = note;
-//     this.text = text;
-//   }
-//   Widget build(BuildContext context) {
-//   return FlatButton(
-//     color: this.backGroundColor,
-//     onPressed: () {
-//       player.play(this.note);
-//     },
-//     child: Text(this.text),
-//   );
-//   }
-// }
