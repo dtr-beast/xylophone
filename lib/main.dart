@@ -10,9 +10,11 @@ final player = AudioCache();
 // An Expanded Flat Play Button for Notes
 Expanded expandedFlatPlayButton(Color backGroundColor, int noteNum) {
   return Expanded(
-    child: FlatButton(
-      padding: EdgeInsets.all(0.0),
-      color: backGroundColor,
+    child: TextButton(
+      style: TextButton.styleFrom(
+          padding: const EdgeInsets.all(0), backgroundColor: backGroundColor),
+      // padding: EdgeInsets.all(0.0),
+      // color: backGroundColor,
       onPressed: () {
         player.play('note$noteNum.wav');
       },
